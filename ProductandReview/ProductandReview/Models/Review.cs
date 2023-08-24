@@ -8,9 +8,7 @@ namespace ProductandReviewAPI.Models
         public int Id { get; set; }
         public string Text { get; set; }
         public int Rating { get; set; }
-
-        [ForeignKey("Product")]
-        public int ProductId { get; set; }
+        public int ProductId { get; set; } //Foreign Key
         public Product Product { get; set; }
     }
     public class ReviewDTO

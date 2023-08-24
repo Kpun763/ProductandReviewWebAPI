@@ -18,15 +18,6 @@ namespace ProductandReview.Controllers
             _context = context;
         }
 
-            
-        // GET: api/<Products>
-        [HttpGet]
-        public IActionResult GetAllProducts()
-        {
-            var products = _context.Products.ToList();
-            return Ok(products);
-        }
-
         // GET api/<ProductsC>/5
         [HttpGet("{id}")]
         public IActionResult GetProduct(int id)

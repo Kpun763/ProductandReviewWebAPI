@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "baff1ba0-8ccd-4368-9979-87ef58d1c029",
+		"name": "ASPNET_ProductReview_WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29173397"
+	},
+	"item": [
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7248/api/Reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7248/api/Reviews/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Reviews",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Product Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7248/api/Reviews/ByProductId/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Reviews",
+								"ByProductId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Text\": \"Great tasting water!\",\r\n  \"Rating\": 5,\r\n  \"ProductId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7248/api/Reviews",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Id\": 3,\r\n  \"Text\": \"Great tasting water!\",\r\n  \"Rating\": 5,\r\n  \"ProductId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7248/api/Reviews/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Reviews",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Id\": 3,\r\n  \"Text\": \"Great tasting water!\",\r\n  \"Rating\": 5,\r\n  \"ProductId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7248/api/Reviews/14",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Reviews",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7248/api/Products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Under $20",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7248/api/Products?maxPrice=20",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Products"
+							],
+							"query": [
+								{
+									"key": "maxPrice",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7248/api/Products/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Fiji Water\",\r\n    \"Price\": 7.99,\r\n    \"Reviews\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7248/api/Products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 3,\r\n    \"Name\": \"Evian Water\",\r\n    \"Price\": 8.99,\r\n    \"Reviews\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7248/api/Products/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 3,\r\n    \"Name\": \"Evian Water\",\r\n    \"Price\": 8.99,\r\n    \"Reviews\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7248/api/Products/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7248",
+							"path": [
+								"api",
+								"Products",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
